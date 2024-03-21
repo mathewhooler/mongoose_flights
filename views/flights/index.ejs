@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<ul>
+  <% flights.forEach( flight => { %>
+    <li>
+        <a href="/flights/<%= flight.id %>">
+          <li>Airline: <%= flight.airline %></li>
+          <li>Airport: <%= flight.airport %></li>
+          <li>Flight Number: <%= flight.flightNo %></li>
+          <li>Departs: <%= flight.departs %></li>
+        </a>
+    </li>
+  <% }) %>
+</ul>

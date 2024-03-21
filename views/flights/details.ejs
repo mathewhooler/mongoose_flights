@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+
+    <ul>
+      <li>Airline: <%= flight.airline %></li>
+      <li>Airport: <%= flight.airport %></li>
+      <li>Flight Number: <%= flight.flightNo %></li>
+      <li>Departs: <%= flight.departs %></li>
+    </ul>
+
+
+    <h2>Destinations</h2>
+
+    <!-- todo: view all destinations -->
+
+    <h2>Add a stop</h2>
+    <!-- todo: change the action and create the route and controller -->
+    <form action="/flights" method="POST">
+      <label for="airport">Airport</label>
+      <input type="text" id="airport" name="airport">
+      <br>
+      <label for="arrival">Arrival</label>
+      <input type="date" id="arrival" name="arrival" min="<%= flight.departs.toISOString().slice(0,10) %>">
+      <br>
+      <button>Add Stop</button>
+  </form>
+  
